@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #f5f1e8;
+    color: #1f1f1f;
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 60px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-label {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    margin-bottom: 15px;
+    font-size: clamp(48px, 7vw, 90px);
+}
+
+.hero-years {
+    margin-bottom: 25px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.hero-description {
+    max-width: 520px;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+
+/*picture of hero*/
+.hero-image {
+    width: 360px;
+    height: 460px;
+    overflow: hidden;
+    border-radius: 180px 180px 20px 20px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+
+/* Story Section */
+.story {
+    padding: 100px 8%;
+    background-color: #ffffff;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.section-label {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    font-size: 48px;
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+
+}
+
+.story-item {
+    padding-top: 25px;
+    border-top: 1px solid #cfc8bb;  /* border line*/
+}
+
+.story-item h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.story-item p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555555;
+}
+
+
+
+
+
+/*Legacy Section*/
+.legacy {
+    padding: 100px 8%;
+    background-color: #f5f1e8;
+    margin-bottom: 40px;
+}
+
+.legacy-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.legacy-item {
+    padding: 35px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+}
+
+.legacy-item h3 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.legacy-item p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555555;
+}
+
+.math-example {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #000000;
+    font-size: 22px;
+    text-align: center;
+}
+
+
+
+
+/*Timeline Section*/
+.timeline-section {
+    padding: 70px 8%;
+    background-color: #ffffff;
+}
+
+.timeline {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 40px;
+    padding: 30px 0;
+    border-top: 1px solid #cfc8bb;
+}
+
+.timeline-item:last-child {
+    border-bottom: 1px solid #cfc8bb;
+}
+
+.timeline-year {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.timeline-text h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.timeline-text p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555555;
+}
+
+
+
+
+/*closing section*/
+.closing {
+    padding: 200px 8%;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    text-align: center;
+}
+
+.closing-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.closing .section-label {
+    margin-bottom: 50px;
+}
+
+.closing h2 {
+    margin-bottom: 25px;
+    font-size: 44px;
+    line-height: 1.2;
+}
+
+.closing .closing-text {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #bebdbd;
+}
+
+
+
+
+/*Footer Section*/
+.footer {
+    padding: 25px 8%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: #151515;
+    color: #aaaaaa;
+}
+
+
+
+
+/*Responsive Design*/
+@media (max-width: 700px)
+{
+
+    .hero {
+        min-height: auto;
+        padding: 50px 6%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-description {
+        margin: 0 auto;
+    }
+
+    .hero-image {
+        width: 280px;
+        height: 360px;
+    }
+
+    .story {
+        padding: 70px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 38px;
+    }
+
+    .story-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .legacy {
+        padding: 70px 6%;
+    }
+
+    .legacy-content {
+        grid-template-columns: 1fr;
+    }
+
+    .legacy-item {
+        padding: 30px;
+    }
+
+    .timeline-section {
+        padding: 70px 6%;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .closing {
+        padding: 80px 6%;
+    }
+
+    .closing h2 {
+        font-size: 34px;
+    }
+
+    .footer {
+        padding: 25px 6%;
+    }
+}
