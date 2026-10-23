@@ -1,0 +1,207 @@
+/* Basic page settings */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333333;
+}
+
+/* Main application*/
+.app {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Header */
+.app-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.app-header h1 {
+    margin-bottom: 10px;
+}
+
+.app-header p {
+    color: #666666;
+}
+
+/* Task input section */
+.task-input-section {
+    margin-bottom: 30px;
+}
+
+.task-input-section h2,
+.tasks-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Input form */
+#task-form {
+    display: flex;
+    gap: 10px;
+}
+
+#task-input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+#task-form button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#task-form button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Task sections */
+.tasks-section {
+    margin-bottom: 25px;
+}
+
+.tasks-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tasks-section li {
+    padding: 14px;
+    margin-bottom: 10px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+}
+
+/* Empty-list messages */
+#pending-empty-message,
+#completed-empty-message {
+    color: #777777;
+    font-size: 14px;
+    padding: 12px 0;
+}
+
+/* Task item layout */
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.task-item:hover {
+    background-color: #f1f5f9;
+}
+
+/* Task text */
+.task-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+/* Task buttons */
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.task-actions button {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* Complete button */
+.complete-button {
+    background-color: #16a34a;
+}
+
+.complete-button:hover {
+    background-color: #15803d;
+}
+
+
+/* Edit button */
+.edit-button {
+    background-color: #d97706;
+}
+
+.edit-button:hover {
+    background-color: #b45309;
+}
+
+
+/* Undo button */
+.undo-button {
+    background-color: #ab22ca;
+}
+
+.undo-button:hover {
+    background-color: #8e19a3;
+}
+
+
+/* Delete button */
+.delete-button {
+    background-color: #dc2626;
+}
+
+.delete-button:hover {
+    background-color: #b91c1c;
+}
+
+/* Completed task appearance */
+.completed-task .task-text {
+    text-decoration: line-through;
+    color: #777777;
+}
+
+
+
+/* Mobile layout */
+@media (max-width: 480px) {
+    .app {
+        padding: 20px 15px;
+    }
+
+    #task-form {
+        flex-direction: column;
+    }
+
+    #task-form button {
+        width: 100%;
+    }
+
+    .task-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .task-actions {
+        width: 100%;
+    }
+}
