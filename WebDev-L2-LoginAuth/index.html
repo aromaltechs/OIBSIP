@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Auth System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="auth-container">
+        <section class="auth-card">
+
+            <h1>Welcome Back!</h1>
+            <p class="subtitle">Log in to access your account.</p>
+
+
+
+            <form id="login-form">
+
+                <div class="form-group">
+                    <label for="login-username">Username or Email</label>
+
+                    <input
+                        type="text"
+                        id="login-username"
+                        placeholder="Enter username or email"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+
+                    <input
+                        type="password"
+                        id="login-password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="primary-button">Login</button>
+
+            </form>
+
+
+
+            <p id="message" role="status" aria-live="polite"></p>
+
+            <p class="switch-text">Don't have an account?
+                <a href="register.html">Register here</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
