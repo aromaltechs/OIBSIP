@@ -2,16 +2,16 @@
 
 A responsive browser-based calculator developed using HTML5, CSS3, and vanilla JavaScript as part of the **Oasis Infobyte Web Development and Designing Internship — Level 2, Task 1**.
 
-**Intern:** Aromal Suresh
-**Organization:** Oasis Infobyte
-**Track:** Web Development and Designing
+**Intern:** Aromal Suresh 
+**Organization:** Oasis Infobyte 
+**Track:** Web Development and Designing 
 **Level / Task:** Level 2 — Task 1: Calculator
 
 ## Live Demo
 
-[**Open the Calculator**](https://aromaltechs.github.io/OIBSIP/WebDev-L2-Calculator/)
+[**View the live Calculator**](https://aromaltechs.github.io/OIBSIP/WebDev-L2-Calculator/)
 
-[View other projects](https://github.com/aromaltechs/OIBSIP)
+[Explore the OIBSIP Repository](https://github.com/aromaltechs/OIBSIP)
 
 ## Demo Video
 
