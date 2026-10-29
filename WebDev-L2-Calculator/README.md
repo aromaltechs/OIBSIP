@@ -65,7 +65,6 @@ WebDev-L2-Calculator/
     ├── mobile-layout.png
     ├── chained-operations.png
     └── division-by-zero.png
-    └── calculator-preview.png
 ```
 
 ## Example Calculations
