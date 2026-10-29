@@ -7,6 +7,7 @@
 body {
     min-height: 100vh;
     display: flex;
+    padding: 16px;
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
@@ -16,6 +17,7 @@ body {
 .calculator
 {
     width: 320px;
+    max-width: 100%;
     padding: 20px;
     border-radius: 16px;
     background-color: #282828;
@@ -26,6 +28,8 @@ body {
 
 .display
 {
+    width: 100%;
+    min-width: 0;
     min-height: 90px;
     padding: 15px;
     margin-bottom: 15px;
@@ -45,13 +49,19 @@ body {
     color: #535353;
 }
 
-#current-number
-{
-    font-size: 32px;
-    font-weight: bold;
+
+#current-number {
+max-width: 100%;
+min-width: 0;
+font-weight: bold;
+overflow-wrap: anywhere;
+font-size: clamp(1.4rem, 6vw, 2rem);
+line-height: 1.3;
 }
 
-
+#current-number.error-message {
+font-size: 20px !important;
+}
 
 
 
@@ -66,6 +76,7 @@ body {
     grid-template-columns: repeat(4, 1fr);       /* 4 equal width columns */
     gap: 10px;
 }
+
 button
 {
     min-height: 55px;
@@ -92,6 +103,12 @@ button:active
     grid-column: span 2;
 }
 
+button:focus-visible {
+    outline: 3px solid #4c9ffe;
+    outline-offset: 3px;
+    position: relative;
+    z-index: 1;
+}
 
 
 
@@ -130,7 +147,6 @@ button[data-operator]
 
 
 
-
 /* Responsive Design */
 @media (max-width: 400px)
 {
@@ -143,5 +159,11 @@ button[data-operator]
     button 
     {
         min-height: 50px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button:active {
+        transform: none;
     }
 }

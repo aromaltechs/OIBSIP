@@ -12,14 +12,14 @@
     <main class="calculator">
 
         <div class="display">
-            <div id="previous-number"></div>
-            <div id="current-number">0</div>
+            <div id="previous-number" aria-live="polite"></div>
+            <div id="current-number" aria-live="polite" aria-atomic="true">0</div>
         </div>
 
         <div class="buttons">
 
-            <button id="clear" class="span-two">AC</button> 
-            <button id="backspace">←</button>
+            <button id="clear" class="span-two">C</button> 
+            <button id="backspace" aria-label="Backspace">←</button>
             <button data-operator="/">÷</button>
 
             <button data-number="7">7</button>
