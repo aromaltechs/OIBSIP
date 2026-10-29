@@ -7,8 +7,6 @@ A responsive browser-based calculator developed using HTML5, CSS3, and vanilla J
 **Track:** Web Development and Designing
 **Level / Task:** Level 2 — Task 1: Calculator
 
-![Calculator Preview](./screenshots/calculator-preview.png)
-
 ## Live Demo
 
 [**Open the Calculator**](https://aromaltechs.github.io/OIBSIP/WebDev-L2-Calculator/)
