@@ -59,8 +59,43 @@ body {
     height: 100%;
     display: block;
     object-fit: cover;
-    object-position: center;
+    object-position: center top;
 }
+
+
+
+
+/* Quote Section */
+.quote-section {
+    padding: 50px 20px;
+    background-color: #f0e8d8;
+    text-align: center;
+}
+
+.quote-section blockquote {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    border-left: 5px solid #8b6f47;
+    background-color: #fffaf0;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.quote-section blockquote p {
+    margin: 0 0 20px;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.quote-section cite {
+    display: block;
+    color: #72552f;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: bold;
+}
+
 
 
 
@@ -272,6 +307,19 @@ body {
         width: 280px;
         height: 360px;
     }
+
+    .quote-section {
+        padding: 35px 15px;
+    }
+
+    .quote-section blockquote {
+        padding: 20px;
+    }
+
+    .quote-section blockquote p {
+        font-size: 1.15rem;
+    }
+
 
     .story {
         padding: 70px 6%;
