@@ -11,8 +11,34 @@ const completedCount = document.getElementById("completed-count");
 const pendingEmptyMessage = document.getElementById("pending-empty-message");
 const completedEmptyMessage = document.getElementById("completed-empty-message");
 
+const inputError = document.getElementById("input-error");
+
+
+
+// Set an icon and label inside a button
+function setButtonContent(button, iconClass, label) {
+    const icon = document.createElement("i");
+    icon.className = iconClass;
+    icon.setAttribute("aria-hidden", "true");
+
+    const text = document.createElement("span");
+    text.textContent = label;
+
+    button.replaceChildren(icon, text);
+}
+
+
+
+
 // Load saved tasks from Local Storage
-let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+let tasks = [];
+
+try {
+    tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+} catch (error) {
+    console.error("Unable to load saved tasks:", error);
+}
+
 
 // Save tasks to Local Storage
 function saveTasks() {
@@ -30,10 +56,29 @@ function renderTasks() {
         const listItem = document.createElement("li");
         listItem.classList.add("task-item");
 
+        // Create task details container
+        const taskDetails = document.createElement("div");
+        taskDetails.classList.add("task-details");
+
         // Create task text
         const taskName = document.createElement("span");
         taskName.classList.add("task-text");
         taskName.textContent = task.text;
+
+        // Create timestamp
+        const timestamp = document.createElement("small");
+        timestamp.classList.add("task-timestamp");
+
+        timestamp.textContent = "Added: " + (task.createdAt || "Date unavailable");
+
+        // Display completion timestamp
+        if (task.completed && task.completedAt) {
+         timestamp.textContent += " | Completed: " + task.completedAt;
+        }
+
+        // Add task name and timestamp to the details container
+        taskDetails.appendChild(taskName);
+        taskDetails.appendChild(timestamp);
 
         // Create the buttons container
         const actions = document.createElement("div");
@@ -41,33 +86,13 @@ function renderTasks() {
 
         // Create Edit button
         const editButton = document.createElement("button");
-        editButton.textContent = "Edit";
+        setButtonContent(editButton, "fa-solid fa-pen", "Edit");
         editButton.classList.add("edit-button");
         editButton.type = "button";
 
-        editButton.addEventListener("click", function () {
-            const updatedText = prompt("Edit your task:", task.text);
-
-            if (updatedText === null) {
-                return;
-            }
-
-            const trimmedText = updatedText.trim();
-
-            if (trimmedText === "") {
-                alert("Task name cannot be empty!");
-                return;
-            }
-
-            task.text = trimmedText;
-
-            saveTasks();
-            renderTasks();
-        });
-
         // Create Delete button
         const deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete";
+        setButtonContent(deleteButton, "fa-solid fa-trash", "Delete");
         deleteButton.classList.add("delete-button");
         deleteButton.type = "button";
 
@@ -85,27 +110,120 @@ function renderTasks() {
         if (task.completed) {
             listItem.classList.add("completed-task");
 
-            statusButton.textContent = "Undo";
+            setButtonContent(statusButton, "fa-solid fa-rotate-left", "Undo");
             statusButton.classList.add("undo-button");
         } else {
-            statusButton.textContent = "Complete";
+            setButtonContent(statusButton, "fa-solid fa-check", "Complete");
             statusButton.classList.add("complete-button");
         }
 
         statusButton.addEventListener("click", function () {
             task.completed = !task.completed;
 
+            if (task.completed) {
+                task.completedAt = new Date().toLocaleString();
+            } else {
+                task.completedAt = null;
+            }
+
             saveTasks();
             renderTasks();
         });
+
+
+    // Inline Edit functionality
+    editButton.addEventListener("click", function () {
+
+    // Create an input field
+    const editInput = document.createElement("input");
+    editInput.type = "text";
+    editInput.value = task.text;
+    editInput.classList.add("edit-input");
+
+    // Clear validation message when the user starts typing
+    editInput.addEventListener("input", function () {
+        editInput.setCustomValidity("");
+    });
+
+    // Create Save button
+    const saveButton = document.createElement("button");
+    setButtonContent(saveButton, "fa-solid fa-floppy-disk", "Save");
+    saveButton.classList.add("edit-button");
+    saveButton.type = "button";
+
+    // Create Cancel button
+    const cancelButton = document.createElement("button");
+    setButtonContent(cancelButton, "fa-solid fa-xmark", "Cancel");
+    cancelButton.classList.add("undo-button");
+    cancelButton.type = "button";
+
+
+    // Replace task text with input field
+    taskDetails.replaceChild(editInput, taskName);
+
+    // Replace Edit button with Save button
+    actions.replaceChild(saveButton, editButton);
+
+    // Add Cancel button
+    actions.appendChild(cancelButton);
+
+    // Remove Complete and Delete buttons
+    actions.removeChild(statusButton);
+    actions.removeChild(deleteButton);
+
+    editInput.focus();
+    editInput.select();
+
+
+    // Save edited task
+    function saveEdit() {
+
+        const updatedText = editInput.value.trim();
+
+        if (updatedText === "") {
+            editInput.setCustomValidity("Task name cannot be empty!");
+            editInput.reportValidity();
+            editInput.focus();
+            return;
+        }
+
+        task.text = updatedText;
+
+        saveTasks();
+        renderTasks();
+    }
+
+    // Save button click
+    saveButton.addEventListener("click", saveEdit);
+
+    // Cancel button click
+    cancelButton.addEventListener("click", function () {
+        renderTasks();
+    });
+
+    // Keyboard shortcuts
+    editInput.addEventListener("keydown", function (event) {
+
+        if (event.key === "Enter") {
+            saveEdit();
+        }
+
+        if (event.key === "Escape") {
+            renderTasks();
+        }
+
+    });
+
+});
+
 
         // Add buttons to the actions container
         actions.appendChild(statusButton);
         actions.appendChild(editButton);
         actions.appendChild(deleteButton);
 
-        // Add task text and actions to the list item
-        listItem.appendChild(taskName);
+        // Add task details and actions to the list item
+        listItem.appendChild(taskDetails);
         listItem.appendChild(actions);
 
         // Put the task in the correct list
@@ -140,14 +258,19 @@ taskForm.addEventListener("submit", function (event) {
     const taskText = taskInput.value.trim();
 
     if (taskText === "") {
-        alert("Please enter a task!");
+        inputError.textContent = "Please enter a task!";
+        taskInput.focus();
         return;
     }
 
+    inputError.textContent = "";
+
     // Create and store the new task
-    const newTask = {
-        text: taskText,
-        completed: false
+   const newTask = {
+    text: taskText,
+    completed: false,
+    createdAt: new Date().toLocaleString(),
+    completedAt: null
     };
 
     tasks.push(newTask);
@@ -155,8 +278,13 @@ taskForm.addEventListener("submit", function (event) {
     saveTasks();
     renderTasks();
 
-    // Clear the input field
+    // Clear the input field and return focus
     taskInput.value = "";
+    taskInput.focus();
+});
+
+taskInput.addEventListener("input", function () {
+    inputError.textContent = "";
 });
 
 // Display saved tasks when the page opens
