@@ -17,22 +17,6 @@ A simple, responsive To-Do Web App built using HTML, CSS, and JavaScript. It hel
 
 [Watch the To-Do Web App Demo](./ToDoApp-Demo.mp4)
 
-## Screenshots
-
-### Desktop & Mobile View
-
-| Desktop Page                                    | Mobile Page                                   |
-| ----------------------------------------------- | --------------------------------------------- |
-| ![Desktop View](./screenshots/desktop-view.png) | ![Mobile View](./screenshots/mobile-view.png) |
-
-### Inline Editing
-
-![Inline Editing](./screenshots/inline-editing.png)
-
-### Empty State
-
-![Empty State](./screenshots/empty-state.png)
-
 ## Features
 
 * Add new tasks to the pending list.
@@ -54,8 +38,23 @@ A simple, responsive To-Do Web App built using HTML, CSS, and JavaScript. It hel
 * CSS3
 * JavaScript
 * Font Awesome 6.7.2
-
 * Browser Local Storage
+
+## Screenshots
+
+### Desktop & Mobile View
+
+| Desktop Page                                    | Mobile Page                                   |
+| ----------------------------------------------- | --------------------------------------------- |
+| ![Desktop View](./screenshots/desktop-view.png) | ![Mobile View](./screenshots/mobile-view.png) |
+
+### Inline Editing
+
+![Inline Editing](./screenshots/inline-editing.png)
+
+### Empty State
+
+![Empty State](./screenshots/empty-state.png)
 
 ## How to Run Locally
 
