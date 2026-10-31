@@ -6,6 +6,7 @@
 
     <title>To-Do App</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -29,10 +30,16 @@
                     id="task-input"
                     placeholder="Enter your task..."
                     aria-label="Enter a new task"
+                    autocomplete="off"
                 >
 
-                <button type="submit">Add Task</button>
+                <button type="submit">
+                    <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    <span>Add Task</span>
+                </button>
             </form>
+
+            <p id="input-error" class="input-error" role="alert"></p>
         </section>
 
         <!-- Pending Tasks -->
