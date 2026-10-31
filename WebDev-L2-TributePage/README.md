@@ -19,12 +19,6 @@ A responsive tribute webpage celebrating **Srinivasa Ramanujan**, the renowned I
 
 [Watch the Tribute Page Demo](https://youtu.be/oMqEnGRcOec)
 
-## Screenshots
-
-| Full Desktop Page                                                | Full Mobile Page                                               |
-| ---------------------------------------------------------------- | -------------------------------------------------------------- |
-| ![Full desktop page](./screenshots/tribute-desktop.png) | ![Full mobile page](./screenshots/tribute-mobile.png) |
-
 ## Features
 
 * Introduction to Srinivasa Ramanujan
@@ -40,6 +34,12 @@ A responsive tribute webpage celebrating **Srinivasa Ramanujan**, the renowned I
 
 * HTML5
 * CSS3
+
+## Screenshots
+
+| Full Desktop Page                                                | Full Mobile Page                                               |
+| ---------------------------------------------------------------- | -------------------------------------------------------------- |
+| ![Full desktop page](./screenshots/tribute-desktop.png) | ![Full mobile page](./screenshots/tribute-mobile.png) |
 
 ## Project Structure
 
