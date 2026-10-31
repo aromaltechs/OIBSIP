@@ -15,7 +15,7 @@ A simple, responsive To-Do Web App built using HTML, CSS, and JavaScript. It hel
 
 ## Demo Video
 
-[Watch the To-Do Web App Demo](./ToDoApp-Demo.mp4)
+[Watch the To-Do Web App Demo](https://youtu.be/Wwy2oWJNJ1I)
 
 ## Features
 
@@ -82,12 +82,11 @@ WebDev-L2-ToDoApp/
 ├── style.css
 ├── script.js
 ├── README.md
-├── screenshots/
-│   ├── desktop-view.png
-│   ├── mobile-view.png
-│   ├── inline-editing.png
-│   └── empty-state.png
-└── ToDoApp-Demo.mp4
+└── screenshots/
+    ├── desktop-view.png
+    ├── mobile-view.png
+    ├── inline-editing.png
+    └── empty-state.png
 ```
 
 ## Acknowledgements

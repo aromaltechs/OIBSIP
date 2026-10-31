@@ -2,20 +2,20 @@
 
 A responsive browser-based calculator developed using HTML5, CSS3, and vanilla JavaScript as part of the **Oasis Infobyte Web Development and Designing Internship — Level 2, Task 1**.
 
-**Intern:** Aromal Suresh 
-**Organization:** Oasis Infobyte 
-**Track:** Web Development and Designing 
-**Level / Task:** Level 2 — Task 1: Calculator
+* **Intern:** Aromal Suresh 
+* **Organization:** Oasis Infobyte 
+* **Track:** Web Development and Designing 
+* **Level / Task:** Level 2 — Task 1: Calculator
 
 ## Live Demo
 
-[**View the live Calculator**](https://aromaltechs.github.io/OIBSIP/WebDev-L2-Calculator/)
+[View the live Calculator](https://aromaltechs.github.io/OIBSIP/WebDev-L2-Calculator/)
 
 [Explore the OIBSIP Repository](https://github.com/aromaltechs/OIBSIP)
 
 ## Demo Video
 
-[**Watch the Calculator Demo**](./Calculator-Demo.mp4)
+[**Watch the Calculator Demo**](https://youtu.be/Mis6_G93PgQ)
 
 ## Screenshots
 
@@ -59,9 +59,8 @@ WebDev-L2-Calculator/
 ├── style.css
 ├── script.js
 ├── README.md
-├── Calculator-Demo.mp4
 └── screenshots/
-    ├── desktop-interface.png 
+    ├── desktop-interface.png
     ├── mobile-layout.png
     ├── chained-operations.png
     └── division-by-zero.png
@@ -104,6 +103,10 @@ Alternatively, open the project in Visual Studio Code and use the Live Server ex
 | Event listeners           | Uses `addEventListener()`                                |
 | Avoid `eval()`            | Uses custom calculation logic                            |
 
+## Acknowledgements
+
+Developed as part of the **Oasis Infobyte AICTE Student Internship Program – Web Development and Designing, Level 2, Task 1**.
+
 ## Author
 
 **Aromal Suresh**
@@ -112,5 +115,3 @@ Alternatively, open the project in Visual Studio Code and use the Live Server ex
 * [LinkedIn Profile](https://www.linkedin.com/in/aruz/)
 
 ---
-
-Developed as part of the Oasis Infobyte - Web Development and Designing Internship.

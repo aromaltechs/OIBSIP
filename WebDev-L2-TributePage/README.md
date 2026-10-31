@@ -17,7 +17,7 @@ A responsive tribute webpage celebrating **Srinivasa Ramanujan**, the renowned I
 
 ## Demo Video
 
-[Watch the Tribute Page Demo](./Tribute-Page-Demo.mp4)
+[Watch the Tribute Page Demo](https://youtu.be/oMqEnGRcOec)
 
 ## Screenshots
 
@@ -50,11 +50,10 @@ WebDev-L2-TributePage/
 ├── README.md
 ├── images/
 │   └── ramanujan.jpeg
-├── screenshots/
-│   ├── tribute-preview.png
-│   ├── tribute-desktop.png
-│   └── tribute-mobile.png
-└── Tribute-Page-Demo.mp4
+└── screenshots/
+    ├── tribute-preview.png
+    ├── tribute-desktop.png
+    └── tribute-mobile.png
 ```
 
 ## Content and Research Sources
