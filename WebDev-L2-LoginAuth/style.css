@@ -217,30 +217,92 @@ body {
 ======================================== */
 
 .dashboard-card {
-    max-width: 430px;
+    max-width: 480px;
+}
+
+.dashboard-label {
+    text-align: center;
+    color: #60A5FA;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.dashboard-card h1 {
+    font-size: 25px;
+    overflow-wrap: anywhere;
+}
+
+.dashboard-card .subtitle {
+    margin-bottom: 25px;
 }
 
 .dashboard-content {
     background-color: #1A2B43;
-
     border: 1px solid #29415F;
     border-radius: 9px;
-
     padding: 20px;
-    margin-bottom: 22px;
-
-    font-size: 14px;
-    line-height: 1.8;
-
+    margin-bottom: 18px;
     color: #D7E0EC;
 }
 
-.dashboard-content p + p {
-    margin-top: 10px;
+.dashboard-content h2 {
+    font-size: 17px;
+    margin-bottom: 18px;
+    color: #F8FAFC;
 }
 
-#user-name {
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #334B6B;
+    font-size: 14px;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-row span {
+    color: #A8B5C7;
+}
+
+.info-row strong {
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+#user-name,
+#account-username {
     color: #60A5FA;
+}
+
+.status-active {
+    color: #4ADE80;
+}
+
+.dashboard-security {
+    background-color: rgba(59, 130, 246, 0.08);
+    border: 1px solid #29415F;
+    border-radius: 9px;
+    padding: 17px;
+    margin-bottom: 22px;
+}
+
+.dashboard-security h3 {
+    font-size: 15px;
+    color: #60A5FA;
+    margin-bottom: 8px;
+}
+
+.dashboard-security p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #A8B5C7;
 }
 
 
