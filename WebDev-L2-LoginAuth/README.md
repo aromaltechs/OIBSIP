@@ -2,7 +2,22 @@
 
 A simple, browser-based Login Authentication System developed as part of the **Oasis Infobyte Web Development & Designing Internship — Level 2**.
 
-The application allows users to register with a username, email address, and password, log in using their username or email, access a protected dashboard, and log out securely from the current session.
+The application allows users to register with a username, email address, and password, log in using either their username or email address, access a protected dashboard, and log out from the current session.
+
+* **Intern:** Aromal Suresh
+* **Organization:** Oasis Infobyte
+* **Track:** Web Development and Designing
+* **Level / Task:** Level 2 — Task 4: Login Authentication System
+
+## Live Demo
+
+[Open Login Authentication System](https://aromaltechs.github.io/OIBSIP/WebDev-L2-LoginAuth/)
+
+[Explore the OIBSIP Repository](https://github.com/aromaltechs/OIBSIP)
+
+## Demo Video
+
+[Watch the Login Authentication System Demo](https://youtu.be/mNeDNYjZCMU)
 
 ## Features
 
@@ -15,15 +30,35 @@ The application allows users to register with a username, email address, and pas
 * **Protected Dashboard:** Redirect unauthenticated users to the login page.
 * **Session Management:** Use browser session storage to manage the logged-in state.
 * **Logout:** Clear the active login session and redirect to the login page.
-* **Responsive User Interface:** Style the application with CSS for a clean and user-friendly experience.
+* **Responsive User Interface:** Provide a user-friendly interface for desktop and mobile devices.
 * **Status Messages:** Display success and error messages in different colours.
+
+## Screenshots
+
+### Register — Desktop
+
+![Register desktop](screenshots/registration-page.png)
+
+### Login — Desktop
+
+![Login desktop](screenshots/login-page.png)
+
+### Protected Dashboard — Desktop
+
+![Dashboard desktop](screenshots/dashboard-page.png)
+
+### Mobile Layouts
+
+|                         Register                        |                     Login                     |                       Dashboard                       |
+| :-----------------------------------------------------: | :-------------------------------------------: | :---------------------------------------------------: |
+| ![Register Mobile](screenshots/registration-mobile.png) | ![Login Mobile](screenshots/login-mobile.png) | ![Dashboard Mobile](screenshots/dashboard-mobile.png) |
 
 ## Technologies Used
 
 * HTML5
 * CSS3
 * JavaScript
-* Web Crypto API (SHA-256)
+* Web Crypto API (SHA-256 password hashing)
 * Browser Local Storage
 * Browser Session Storage
 
@@ -31,6 +66,13 @@ The application allows users to register with a username, email address, and pas
 
 ```text
 WebDev-L2-LoginAuth/
+├── screenshots/
+│   ├── registration-page.png
+│   ├── login-page.png
+│   ├── dashboard-page.png
+│   ├── registration-mobile.png
+│   ├── login-mobile.png
+│   └── dashboard-mobile.png
 ├── index.html
 ├── register.html
 ├── dashboard.html
@@ -39,15 +81,13 @@ WebDev-L2-LoginAuth/
 └── README.md
 ```
 
-## Getting Started
-
-### Prerequisites
+## Prerequisites
 
 * A modern web browser
 * Visual Studio Code (recommended)
-* The Live Server extension for Visual Studio Code
+* Live Server extension for Visual Studio Code
 
-### Installation and Setup
+## Installation and Setup
 
 1. Clone or download the `OIBSIP` repository.
 2. Open the `WebDev-L2-LoginAuth` folder in Visual Studio Code.
@@ -76,14 +116,13 @@ Passwords are hashed using SHA-256 before being stored in browser storage. Howev
 
 A production application should use server-side authentication, secure password hashing algorithms such as Argon2id or bcrypt, appropriate session management, and other necessary security controls.
 
-## Internship Information
+## Acknowledgements
 
-* **Organization:** Oasis Infobyte
-* **Track:** Web Development & Designing
-* **Level:** Level 2
-* **Project:** Login Authentication System
-* **Developer:** Aromal Suresh
+Developed as part of the **Oasis Infobyte AICTE Student Internship Program — Web Development and Designing, Level 2, Task 4**.
 
----
+## Author
 
-Developed as part of the Oasis Infobyte Web Development & Designing Internship.
+**Aromal Suresh**
+
+* [GitHub Profile](https://github.com/aromaltechs)
+* [LinkedIn Profile](https://www.linkedin.com/in/aruz/)
