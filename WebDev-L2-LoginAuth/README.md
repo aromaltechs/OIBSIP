@@ -11,7 +11,7 @@ The application allows users to register with a username, email address, and pas
 
 ## Live Demo
 
-[Open Login Authentication System](https://aromaltechs.github.io/OIBSIP/WebDev-L2-LoginAuth/)
+[Open Live Login Authentication System](https://aromaltechs.github.io/OIBSIP/WebDev-L2-LoginAuth/)
 
 [Explore the OIBSIP Repository](https://github.com/aromaltechs/OIBSIP)
 
