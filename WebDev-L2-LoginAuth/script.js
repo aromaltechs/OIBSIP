@@ -28,9 +28,16 @@ if (registerForm) {
 // Clear any previous message
     message.textContent = "";
 
+
 const username = usernameInput.value.trim();
 const email = emailInput.value.trim();
 const password = passwordInput.value;
+
+// Check for empty or whitespace-only fields
+if (!username || !email || !password) {
+    showMessage("Please fill in all fields.", "error");
+    return;
+}
 
 
 // Check if the account already exists
@@ -156,6 +163,7 @@ async function hashPassword(password) {
 
 // PROTECTED DASHBOARD PAGE
 const dashboardPage = document.getElementById("user-name");
+const accountUsername = document.getElementById("account-username");
 
 if (dashboardPage) {
     const loggedInUser = sessionStorage.getItem("loggedInUser");
@@ -164,6 +172,10 @@ if (dashboardPage) {
         window.location.href = "index.html";
     } else {
         dashboardPage.textContent = loggedInUser;
+
+        if (accountUsername) {
+            accountUsername.textContent = loggedInUser;
+        }
     }
 }
 
