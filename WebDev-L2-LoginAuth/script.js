@@ -92,7 +92,12 @@ users.push(newUser);
 localStorage.setItem("users", JSON.stringify(users));
 
 // Display success message
-showMessage("Registration successful!", "success");
+showMessage("Registration successful! Redirecting to login...", "success");
+
+// Redirect to login page after a short delay
+setTimeout(() => {
+    window.location.href = "index.html";
+}, 1500);
 });
 }
 
@@ -191,3 +196,43 @@ if (logoutButton) {
         window.location.href = "index.html";
     });
 }
+
+// PASSWORD VISIBILITY TOGGLE
+
+const passwordToggleButtons = document.querySelectorAll(".password-toggle");
+
+passwordToggleButtons.forEach(button => {
+    button.addEventListener("click", function () {
+
+        const passwordField = this.previousElementSibling;
+
+        const isPasswordHidden = passwordField.type === "password";
+
+        passwordField.type = isPasswordHidden ? "text" : "password";
+
+        this.setAttribute(
+            "aria-label",
+            isPasswordHidden ? "Hide password" : "Show password"
+        );
+
+        this.setAttribute("aria-pressed", isPasswordHidden);
+
+        this.innerHTML = isPasswordHidden
+            ? `<svg class="eye-icon" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round"
+                   stroke-linejoin="round">
+                   <path d="M3 3l18 18"/>
+                   <path d="M10.6 10.6a2 2 0 002.8 2.8"/>
+                   <path d="M9.9 5.2A10.8 10.8 0 0112 5c6.5 0 10 7 10 7a15.5 15.5 0 01-4 4.8"/>
+                   <path d="M6.2 6.2C3.5 8 2 12 2 12s3.5 7 10 7a10.5 10.5 0 004-.8"/>
+               </svg>`
+            : `<svg class="eye-icon" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round"
+                   stroke-linejoin="round">
+                   <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/>
+                   <circle cx="12" cy="12" r="3"/>
+               </svg>`;
+    });
+});
