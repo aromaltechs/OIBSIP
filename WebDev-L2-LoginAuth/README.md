@@ -31,6 +31,8 @@ The application allows users to register with a username, email address, and pas
 * **Session Management:** Use browser session storage to manage the logged-in state.
 * **Logout:** Clear the active login session and redirect to the login page.
 * **Responsive User Interface:** Provide a user-friendly interface for desktop and mobile devices.
+* **Password Visibility Toggle:** Allows users to show or hide their passwords on the login and registration pages.
+* **Automatic Registration Redirect:** Redirects users to the login page after successful registration.
 * **Status Messages:** Display success and error messages in different colours.
 
 ## Screenshots
